@@ -42,7 +42,7 @@ module RailsAdmin
             else
               flash[:error] = I18n.t('admin.state_machine.no_id')
             end
-            redirect_back
+            redirect_back(fallback_location: rails_admin_path)
           end
         end
 
